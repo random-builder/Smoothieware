@@ -29,6 +29,7 @@ private:
 
 	Pin amplifier_pin;
     float min_temp, max_temp;
+    float fact_offset, fact_linear, fact_square;
 };
 
 #endif
