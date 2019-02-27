@@ -72,9 +72,9 @@ float PT100_E3D::adc_value_to_temperature(uint32_t adc_value)
     // polynomial approximation of E3D published curve, using normalized ADC values instead of voltages
     float x = (adc_value / (float)max_adc_value);
     float x2 = (x * x);
-    float t = (this->fact_square * x2) + (this->fact_linear * x) + this->fact_offset;
+    float temp = (this->fact_square * x2) + (this->fact_linear * x) + this->fact_offset;
 
-    return t;
+    return temp;
 }
 
 int PT100_E3D::new_pt100_reading()
